@@ -1,0 +1,171 @@
+/* Basic Container Styling */
+.events-container {
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure even spacing between header, cards, and button */
+}
+
+.events-header {
+  font-size: 42px;
+  text-align: left;
+  color: #fff;
+  margin-left: 50px;
+  margin-bottom: 40px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.events-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  flex-grow: 1; /* Allow the wrapper to take up the remaining space */
+  overflow-y: auto; /* Allow scrolling if cards overflow vertically */
+}
+
+/* Event Card Styling */
+.event-card {
+  width: 350px;
+  height: 550px;
+  background-color: #2c2c2c;
+  color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.event-card__image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.event-card__content {
+  padding: 15px;
+}
+
+.event-card__content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.event-card__content p {
+  font-size: 0.95rem;
+  color: #bbb;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+}
+
+.event-card__tags {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.event-card__tag {
+  background-color: #444;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  color: #00d4b3;
+}
+
+.event-card__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.event-card__price {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.event-card__button {
+  background-color: transparent;
+  color: #00d4b3;
+  border: 2px solid #00d4b3;
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.event-card__button:hover {
+  background-color: #00d4b3;
+  color: #333;
+}
+
+/* Card Hover Effect */
+.event-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Styling for the Next Button */
+.next-button {
+  margin-top: 20px;
+  align-self: center; /* Center the button horizontally */
+  background-color: #00d4b3;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.next-button:hover {
+  background-color: #00c4a3;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .events-container {
+    padding: 20px;
+    justify-content: flex-start; /* Adjust for mobile */
+  }
+
+  .events-wrapper {
+    flex-direction: column; /* Cards stacked */
+    align-items: center;
+    height: auto;
+  }
+
+  .event-card {
+    width: 100%;
+    max-width: 350px; /* Limit the max width */
+    margin-bottom: 20px;
+  }
+
+  .next-button {
+    margin-bottom: 20px; /* Space from bottom */
+    position: relative; /* Ensure it stays within the flow */
+  }
+}
+/* Dots Navigation Styling */
+.dots-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+}
+
+.dot.active {
+  background-color: #00d4b3;
+}

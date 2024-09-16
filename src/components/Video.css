@@ -1,0 +1,4 @@
+/* styles.css or in a CSS module */
+.custom-teal-shadow {
+ box-shadow: 10px 10px 10px 10px #24cfa6 ;
+}
